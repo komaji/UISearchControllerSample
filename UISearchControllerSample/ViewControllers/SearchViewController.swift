@@ -56,12 +56,16 @@ class SearchViewController: UIViewController {
         }
     }
     
+    var searchResults = FoodCategory.all
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
     }
     
@@ -71,12 +75,12 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return FoodCategory.all.count
+        return searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuesIdentifier, for: indexPath)
-        cell.textLabel?.text = FoodCategory.all[indexPath.row].rawValue
+        cell.textLabel?.text = searchResults[indexPath.row].rawValue
         
         return cell
     }
@@ -89,6 +93,31 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchSecondViewController = SearchSecondViewController.build(foodCategory: FoodCategory.all[indexPath.row])
         navigationController?.pushViewController(searchSecondViewController, animated: true)
+    }
+    
+}
+
+// MARK: - UISearchResultsUpdating
+extension SearchViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+    
+        if text.isEmpty {
+            searchResults = FoodCategory.all
+        } else {
+            searchResults = []
+            
+            FoodCategory.all.forEach { foodCategory in
+                if foodCategory.rawValue.contains(text) {
+                    searchResults.append(foodCategory)
+                }
+            }
+        }
+        
+        tableView.reloadData()
     }
     
 }
