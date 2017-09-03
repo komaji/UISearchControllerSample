@@ -12,7 +12,7 @@
         <!--Search-->
         <scene sceneID="Li2-Nf-eLa">
             <objects>
-                <viewController id="I6P-68-iVJ" sceneMemberID="viewController">
+                <viewController id="I6P-68-iVJ" customClass="SearchViewController" customModule="UISearchControllerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PGO-wU-fzu"/>
                         <viewControllerLayoutGuide type="bottom" id="qDT-Ef-cYh"/>
