@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I6P-68-iVJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="Li2-Nf-eLa">
+            <objects>
+                <viewController id="I6P-68-iVJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGO-wU-fzu"/>
+                        <viewControllerLayoutGuide type="bottom" id="qDT-Ef-cYh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A5v-1n-wUd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RcW-Uo-fAE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RcW-Uo-fAE" firstAttribute="leading" secondItem="A5v-1n-wUd" secondAttribute="leading" id="3lR-AO-8QH"/>
+                            <constraint firstAttribute="trailing" secondItem="RcW-Uo-fAE" secondAttribute="trailing" id="Z72-Vn-BTW"/>
+                            <constraint firstItem="qDT-Ef-cYh" firstAttribute="top" secondItem="RcW-Uo-fAE" secondAttribute="bottom" id="ePf-Q4-bO4"/>
+                            <constraint firstItem="RcW-Uo-fAE" firstAttribute="top" secondItem="PGO-wU-fzu" secondAttribute="bottom" id="oHU-D8-ars"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="0iZ-Gd-9HS"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDb-Mw-vg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="270"/>
+        </scene>
+    </scenes>
+</document>
