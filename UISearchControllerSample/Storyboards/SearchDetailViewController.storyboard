@@ -35,6 +35,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="lah-yU-hHb"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="foodCategoryLabel" destination="C4n-dD-KNd" id="cHp-0s-Pqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxV-li-TuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
