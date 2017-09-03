@@ -11,7 +11,7 @@
         <!--Detail-->
         <scene sceneID="hYd-M9-xDV">
             <objects>
-                <viewController id="oSB-wb-Zy5" sceneMemberID="viewController">
+                <viewController id="oSB-wb-Zy5" customClass="SearchDetailViewController" customModule="UISearchControllerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JhK-3z-HTp"/>
                         <viewControllerLayoutGuide type="bottom" id="CJv-f2-kie"/>
