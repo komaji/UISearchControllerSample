@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window?.rootViewController = UINavigationController(rootViewController: SearchViewController.instantiate())
+        
         return true
     }
 
@@ -44,3 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+protocol StoryboardInstantiatable {}
+
+extension StoryboardInstantiatable where Self: UIViewController {
+    
+    static func instantiate() -> Self {
+        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController() as! Self
+        
+        return viewController
+    }
+    
+}
+
+extension UIViewController: StoryboardInstantiatable {}
