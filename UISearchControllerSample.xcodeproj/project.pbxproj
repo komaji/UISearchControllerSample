@@ -17,6 +17,7 @@
 		2B8BB8801F5C376A007868EC /* SearchDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8BB87F1F5C376A007868EC /* SearchDetailViewController.storyboard */; };
 		2B8BB8821F5C37EE007868EC /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8BB8811F5C37EE007868EC /* SearchDetailViewController.swift */; };
 		2BEDF6B81F5C3D9300962E8F /* SearchSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDF6B71F5C3D9300962E8F /* SearchSecondViewController.swift */; };
+		2BEDF6BA1F5C3DDA00962E8F /* SearchSecondViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEDF6B91F5C3DDA00962E8F /* SearchSecondViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2B8BB87F1F5C376A007868EC /* SearchDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDetailViewController.storyboard; sourceTree = "<group>"; };
 		2B8BB8811F5C37EE007868EC /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		2BEDF6B71F5C3D9300962E8F /* SearchSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSecondViewController.swift; sourceTree = "<group>"; };
+		2BEDF6B91F5C3DDA00962E8F /* SearchSecondViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchSecondViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				2B8BB87B1F5C2F1B007868EC /* SearchViewController.storyboard */,
 				2B8BB87F1F5C376A007868EC /* SearchDetailViewController.storyboard */,
+				2BEDF6B91F5C3DDA00962E8F /* SearchSecondViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8BB86E1F5C2DB2007868EC /* LaunchScreen.storyboard in Resources */,
+				2BEDF6BA1F5C3DDA00962E8F /* SearchSecondViewController.storyboard in Resources */,
 				2B8BB86B1F5C2DB2007868EC /* Assets.xcassets in Resources */,
 				2B8BB8691F5C2DB2007868EC /* Main.storyboard in Resources */,
 				2B8BB87C1F5C2F1B007868EC /* SearchViewController.storyboard in Resources */,
