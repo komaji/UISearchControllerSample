@@ -27,7 +27,20 @@ class SearchSecondViewController: UIViewController {
         }
     }
     
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.isHidden = true
+        
+        return searchBar
+    }()
+    
     var foodCategory: FoodCategory!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.titleView = searchBar
+    }
     
 }
 
@@ -53,6 +66,15 @@ extension SearchSecondViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchDetailViewController = SearchDetailViewController.build(food: foodCategory.foods[indexPath.row])
         navigationController?.pushViewController(searchDetailViewController, animated: true)
+    }
+    
+}
+
+// MARK: - IBAction
+extension SearchSecondViewController {
+    
+    @IBAction func searchBarButtonDidTap(_ barButtonItem: UIBarButtonItem) {
+        searchBar.isHidden = false
     }
     
 }
