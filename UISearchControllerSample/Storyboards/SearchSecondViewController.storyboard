@@ -43,13 +43,7 @@
                             <constraint firstItem="5vt-9H-24l" firstAttribute="top" secondItem="QQH-Co-hGg" secondAttribute="bottom" id="hMK-hD-GM3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Second Search" id="qE9-0L-7En">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="L0b-GC-JyN">
-                            <connections>
-                                <action selector="searchBarButtonDidTap:" destination="lIF-jk-DGk" id="UlN-pV-SX1"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Second Search" id="qE9-0L-7En"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="5vt-9H-24l" id="OMb-OO-64U"/>

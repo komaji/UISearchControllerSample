@@ -27,9 +27,12 @@ class SearchSecondViewController: UIViewController {
         }
     }
     
+    lazy var searchBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarButtonDidTap(_:)))
+    
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.isHidden = true
+        searchBar.showsCancelButton = true
+        searchBar.delegate = self
         
         return searchBar
     }()
@@ -39,7 +42,20 @@ class SearchSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = searchBarButtonItem
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationItem.titleView = nil
+        navigationItem.rightBarButtonItem = searchBarButtonItem
+    }
+    
+    @objc func searchBarButtonDidTap(_ barButtonItem: UIBarButtonItem) {
+        navigationItem.rightBarButtonItem = nil
         navigationItem.titleView = searchBar
+        searchBar.becomeFirstResponder()
     }
     
 }
@@ -70,11 +86,12 @@ extension SearchSecondViewController: UITableViewDelegate {
     
 }
 
-// MARK: - IBAction
-extension SearchSecondViewController {
+// MARK: - UISearchBarDelegate
+extension SearchSecondViewController: UISearchBarDelegate {
     
-    @IBAction func searchBarButtonDidTap(_ barButtonItem: UIBarButtonItem) {
-        searchBar.isHidden = false
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.titleView = nil
+        navigationItem.rightBarButtonItem = searchBarButtonItem
     }
     
 }
