@@ -16,6 +16,7 @@
 		2B8BB87E1F5C303E007868EC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8BB87D1F5C303E007868EC /* SearchViewController.swift */; };
 		2B8BB8801F5C376A007868EC /* SearchDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8BB87F1F5C376A007868EC /* SearchDetailViewController.storyboard */; };
 		2B8BB8821F5C37EE007868EC /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8BB8811F5C37EE007868EC /* SearchDetailViewController.swift */; };
+		2BEDF6B81F5C3D9300962E8F /* SearchSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEDF6B71F5C3D9300962E8F /* SearchSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2B8BB87D1F5C303E007868EC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B8BB87F1F5C376A007868EC /* SearchDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDetailViewController.storyboard; sourceTree = "<group>"; };
 		2B8BB8811F5C37EE007868EC /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		2BEDF6B71F5C3D9300962E8F /* SearchSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				2B8BB87D1F5C303E007868EC /* SearchViewController.swift */,
 				2B8BB8811F5C37EE007868EC /* SearchDetailViewController.swift */,
+				2BEDF6B71F5C3D9300962E8F /* SearchSecondViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8BB87E1F5C303E007868EC /* SearchViewController.swift in Sources */,
+				2BEDF6B81F5C3D9300962E8F /* SearchSecondViewController.swift in Sources */,
 				2B8BB8661F5C2DB2007868EC /* ViewController.swift in Sources */,
 				2B8BB8821F5C37EE007868EC /* SearchDetailViewController.swift in Sources */,
 				2B8BB8641F5C2DB2007868EC /* AppDelegate.swift in Sources */,
