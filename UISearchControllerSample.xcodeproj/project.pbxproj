@@ -54,6 +54,8 @@
 		2B8BB8621F5C2DB2007868EC /* UISearchControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				2B8BB8781F5C2E9D007868EC /* Storyboards */,
+				2B8BB8771F5C2E9D007868EC /* ViewControllers */,
 				2B8BB8631F5C2DB2007868EC /* AppDelegate.swift */,
 				2B8BB8651F5C2DB2007868EC /* ViewController.swift */,
 				2B8BB8671F5C2DB2007868EC /* Main.storyboard */,
@@ -62,6 +64,20 @@
 				2B8BB86F1F5C2DB2007868EC /* Info.plist */,
 			);
 			path = UISearchControllerSample;
+			sourceTree = "<group>";
+		};
+		2B8BB8771F5C2E9D007868EC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B8BB8781F5C2E9D007868EC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
