@@ -10,21 +10,21 @@ import UIKit
 
 class SearchDetailViewController: UIViewController {
     
-    static func build(foodCategory: FoodCategory) -> SearchDetailViewController {
+    static func build(food: String) -> SearchDetailViewController {
         let viewController = SearchDetailViewController.instantiate()
-        viewController.foodCategory = foodCategory
+        viewController.food = food
         
         return viewController
     }
     
     @IBOutlet weak var foodCategoryLabel: UILabel!
     
-    var foodCategory: FoodCategory!
+    var food: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        foodCategoryLabel.text = foodCategory.rawValue
+        foodCategoryLabel.text = food
     }
     
 }

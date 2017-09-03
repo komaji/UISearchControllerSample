@@ -12,15 +12,39 @@ enum FoodCategory: String {
     case pizza = "Pizza"
     case humberger = "Humberger"
     case sushi = "Sushi"
+    
+    static var all: [FoodCategory] {
+        return [
+            .pizza,
+            .humberger,
+            .sushi
+        ]
+    }
+    
+    var foods: [String] {
+        switch self {
+        case .pizza:
+            return [
+                "Margherita",
+                "Quattro Formaggi"
+            ]
+        case .humberger:
+            return [
+                "Plain",
+                "Cheese",
+                "Pickles"
+            ]
+        case .sushi:
+            return [
+                "Tuna",
+                "Salmon",
+                "Sea Urchin"
+            ]
+        }
+    }
 }
 
 class SearchViewController: UIViewController {
-    
-    let foodCategories: [FoodCategory] = [
-        .pizza,
-        .humberger,
-        .sushi
-    ]
     
     let tableViewCellReuesIdentifier = "SearchTableViewCell"
     
@@ -38,12 +62,12 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodCategories.count
+        return FoodCategory.all.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuesIdentifier, for: indexPath)
-        cell.textLabel?.text = foodCategories[indexPath.row].rawValue
+        cell.textLabel?.text = FoodCategory.all[indexPath.row].rawValue
         
         return cell
     }
@@ -54,8 +78,8 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let searchDetailViewController = SearchDetailViewController.build(foodCategory: foodCategories[indexPath.row])
-        navigationController?.pushViewController(searchDetailViewController, animated: true)
+        let searchSecondViewController = SearchSecondViewController.build(foodCategory: FoodCategory.all[indexPath.row])
+        navigationController?.pushViewController(searchSecondViewController, animated: true)
     }
     
 }
