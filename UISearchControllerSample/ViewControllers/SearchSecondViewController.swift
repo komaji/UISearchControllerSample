@@ -27,35 +27,22 @@ class SearchSecondViewController: UIViewController {
         }
     }
     
-    lazy var searchBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarButtonDidTap(_:)))
-    
     lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.showsCancelButton = true
+        let searchBar = UISearchBar(frame: CGRect(x: 0.0, y: 0.0, width:  260.0, height: 44.0))
         searchBar.delegate = self
         
         return searchBar
     }()
+    
+    lazy var searchBarButtonItem = UIBarButtonItem(customView: self.searchBar)
     
     var foodCategory: FoodCategory!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = nil
         navigationItem.rightBarButtonItem = searchBarButtonItem
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationItem.titleView = nil
-        navigationItem.rightBarButtonItem = searchBarButtonItem
-    }
-    
-    @objc func searchBarButtonDidTap(_ barButtonItem: UIBarButtonItem) {
-        navigationItem.rightBarButtonItem = nil
-        navigationItem.titleView = searchBar
-        searchBar.becomeFirstResponder()
     }
     
 }
@@ -89,8 +76,18 @@ extension SearchSecondViewController: UITableViewDelegate {
 // MARK: - UISearchBarDelegate
 extension SearchSecondViewController: UISearchBarDelegate {
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.bounds = CGRect(x: 0.0, y: 0.0, width: 345.0, height: 44.0)
+        searchBar.showsCancelButton = true
+        navigationItem.hidesBackButton = true
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        navigationItem.titleView = nil
+        searchBar.bounds = CGRect(x: 0.0, y: 0.0, width: 260.0, height: 44.0)
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+        navigationItem.hidesBackButton = false
+        navigationItem.rightBarButtonItem = nil
         navigationItem.rightBarButtonItem = searchBarButtonItem
     }
     
